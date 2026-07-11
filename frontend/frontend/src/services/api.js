@@ -5,7 +5,7 @@ export async function scanWebsite(url){
 
             resolve({
                 status:safe ? "🟢 SAFE" : "🔴 PHISHING",
-                riskScore:safe ? 10 : 90,
+                riskScore:safe ? 10 : 80,
                 reasons:safe
                 ? ["HTTPS Enabled","Trusted Domain"]
                 :  ["Suspicious Domain", "No HTTPS",
