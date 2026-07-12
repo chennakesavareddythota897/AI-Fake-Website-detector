@@ -9,11 +9,13 @@ const App = () => {
   const [riskScore,setRiskScore] = useState(0);
   const [loading,setLoading] = useState(false);
   const [reasons,setReasons] = useState([]);
+
   async function handleScan() {
 
     setLoading(true);
   setStatus("🔄 Scanning...");
-const result = await scanWebsite("https://google.com");
+const result = await scanWebsite();
+console.log(result)
 setStatus(result.status);
 setRiskScore(result.riskScore);
 setReasons(result.reasons)
