@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+dataset.csv
+
+# Node
+node_modules/
+dist/
+
+# Database
+scans.db
+
+# OS files
+.DS_Store
+Thumbs.db

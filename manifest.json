@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "AI Fake Website Detector",
+  "version": "1.0",
+  "description": "Detects phishing and fake websites in real time using AI.",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "action": {
+    "default_popup": "frontend/frontend/dist/index.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

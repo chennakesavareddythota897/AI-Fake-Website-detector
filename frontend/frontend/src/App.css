@@ -24,3 +24,260 @@ body{
     margin-top:8px;
     font-size: 14px;
 }
+
+.warning-banner {
+  background-color: #dc2626;
+  color: white;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  animation: pulse 1.5s infinite;
+}
+
+.warning-icon {
+  font-size: 32px;
+}
+
+.warning-banner h2 {
+  margin: 0 0 4px 0;
+  font-size: 18px;
+}
+
+.warning-banner p {
+  margin: 0;
+  font-size: 14px;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.85; }
+  100% { opacity: 1; }
+}
+
+.history-panel {
+  padding: 16px;
+  margin-top: 16px;
+  border-top: 2px solid #e5e7eb;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-item {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+  flex-wrap: wrap;
+}
+
+.history-url {
+  font-weight: bold;
+  flex: 1;
+  min-width: 200px;
+  word-break: break-all;
+}
+
+/* Extension popup sizing */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 380px;
+  min-height: 500px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+}
+
+#root {
+  width: 380px;
+}
+
+/* Overall container spacing */
+.header {
+  padding: 24px 20px;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+}
+
+.header .logo {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  margin: 4px 0;
+  font-size: 20px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* Input box container */
+.status-card,
+.result-card,
+.history-panel {
+  margin: 12px 16px;
+  padding: 14px 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.status-card h3,
+.result-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-card p {
+  margin: 0 0 10px 0;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.result-card p {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* Scan button */
+button {
+  margin: 4px 16px 12px 16px;
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  width: calc(100% - 32px);
+  transition: background-color 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* URL input field */
+input[type="text"] {
+  border-radius: 8px !important;
+  border: 1px solid #cbd5e1 !important;
+  font-size: 13px !important;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #2563eb !important;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* History list cleanup */
+.history-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.history-item {
+  border-radius: 8px;
+  margin-bottom: 6px;
+  background: #f8fafc;
+  border-bottom: none !important;
+}
+
+.threat-report {
+  margin: 12px 16px;
+  padding: 14px 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.threat-report h3 {
+  margin: 0 0 4px 0;
+  font-size: 13px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.report-subtitle {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0 0 12px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.confidence-bar-wrapper {
+  margin-bottom: 14px;
+}
+
+.confidence-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.confidence-bar-track {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.confidence-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.feature-table td {
+  padding: 6px 4px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.feature-table td:first-child {
+  color: #64748b;
+}
+
+.feature-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+}
+
+.flag-bad {
+  color: #dc2626;
+}
+
+.flag-good {
+  color: #16a34a;
+}
